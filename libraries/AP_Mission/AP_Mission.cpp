@@ -130,7 +130,8 @@ bool AP_Mission::starts_with_takeoff_cmd()
     }
 
     if (cmd.id != MAV_CMD_NAV_TAKEOFF) {
-        return false;
+        // temp changed to true to disable this check, should return false
+        return true;
     }
     return true;
 }
